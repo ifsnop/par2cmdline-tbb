@@ -986,8 +986,8 @@ string DiskFile::TranslateFilename(const string &filename)
       CommandLine* cl = CommandLine::get();
       if (cl && !cl->GetBaseDirectory().empty())
         ch = '/'; // if '\\' was stored in the par2 file, change it to '/'
-      else
-        ok = false;
+//    else
+//      ok = false;
     }
 #endif
 

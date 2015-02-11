@@ -110,8 +110,8 @@ void Par2RepairerSourceFile::ComputeTargetFileName(const string &path) // path i
   const string& bd = cl->GetBaseDirectory();
   if (bd.empty()) {
     // Strip the path from the filename
-    if (string::npos != (where = filename.find_last_of(OS_SEPARATOR)))
-      filename = filename.substr(where+1);
+    //if (string::npos != (where = filename.find_last_of(OS_SEPARATOR)))
+    //  filename = filename.substr(where+1);
 
     targetfilename = path + filename;
   } else {

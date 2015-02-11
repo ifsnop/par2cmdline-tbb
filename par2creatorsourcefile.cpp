@@ -98,7 +98,9 @@ bool Par2CreatorSourceFile::Open(CommandLine::NoiseLevel noiselevel,
       parfilename = diskfilename;
     }
   } else {
-    string s(DiskFile::GetCanonicalPathname(diskfilename));
+//  string s(DiskFile::GetCanonicalPathname(diskfilename));
+    parfilename = diskfilename.substr(bd.length());
+    string s(DiskFile::GetCanonicalPathname(diskfilename.substr(bd.length())));
 #if defined(WIN32) || defined(__APPLE_CC__)
     if (0 != stricmp(s.substr(0, bd.length()).c_str(), bd.c_str()))
 #else
@@ -121,6 +123,7 @@ bool Par2CreatorSourceFile::Open(CommandLine::NoiseLevel noiselevel,
       return false; // a file name is needed
     }
     parfilename = s;
+
   }
 //printf("about to store this in packet:\n"); dump_utf8_as_utf16(parfilename);
   // Create the Description and Verification packets
