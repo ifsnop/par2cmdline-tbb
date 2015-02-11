@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{44b2230f-ae71-435b-b42f-48e124eefc50}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{f367337e-4daa-4427-83e7-afea5fccf4a0}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{78bbe784-9bc9-478b-84ec-ee380df63c84}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="commandline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="crc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="creatorpacket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="criticalpacket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="datablock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="descriptionpacket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diskfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filechecksummer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="galois.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainpacket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="par1fileformat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="par1repairer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="par1repairersourcefile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="par2cmdline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="par2creator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="par2creatorsourcefile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="par2fileformat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="par2repairer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="par2repairersourcefile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="recoverypacket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="reedsolomon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="verificationhashtable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="verificationpacket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="buffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="commandline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="crc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="creatorpacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="criticalpacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="datablock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="descriptionpacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diskfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filechecksummer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="galois.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="letype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainpacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="par1fileformat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="par1repairer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="par1repairersourcefile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="par2cmdline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="par2creator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="par2creatorsourcefile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="par2fileformat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="par2repairer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="par2repairersourcefile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="recoverypacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="reedsolomon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="verificationhashtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="verificationpacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="aclocal.m4" />
+    <None Include="AUTHORS" />
+    <None Include="ChangeLog" />
+    <None Include="config.guess" />
+    <None Include="config.h.in" />
+    <None Include="config.sub" />
+    <None Include="configure" />
+    <None Include="configure.ac" />
+    <None Include="COPYING" />
+    <None Include="depcomp" />
+    <None Include="INSTALL" />
+    <None Include="install-sh" />
+    <None Include="Makefile" />
+    <None Include="Makefile.am" />
+    <None Include="Makefile.in" />
+    <None Include="missing" />
+    <None Include="mkinstalldirs" />
+    <None Include="NEWS" />
+    <None Include="PORTING" />
+    <None Include="posttest" />
+    <None Include="pretest" />
+    <None Include="README" />
+    <None Include="ROADMAP" />
+    <None Include="stamp-h.in" />
+    <None Include="test1" />
+    <None Include="test2" />
+    <None Include="test3" />
+    <None Include="test4" />
+    <None Include="test5" />
+    <None Include="test6" />
+  </ItemGroup>
+</Project>
