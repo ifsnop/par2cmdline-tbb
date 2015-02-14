@@ -27,6 +27,8 @@ static char THIS_FILE[]=__FILE__;
 #endif
 #endif
 
+#define _unused(x) ((void)x)
+
 static u32 smartpar11 = 0x03000101;
 
 Par1Repairer::Par1Repairer(void)
@@ -324,7 +326,8 @@ bool Par1Repairer::LoadRecoveryFile(string filename)
           ||
           (fileheader.datasize && (fileheader.dataoffset < sizeof(fileheader) || fileheader.dataoffset + fileheader.datasize > filesize))
           ||
-          (fileheader.datasize && (fileheader.filelistoffset <= fileheader.dataoffset && fileheader.dataoffset < fileheader.filelistoffset+fileheader.filelistsize || fileheader.dataoffset <= fileheader.filelistoffset && fileheader.filelistoffset < fileheader.dataoffset + fileheader.datasize)))
+          (fileheader.datasize && ((fileheader.filelistoffset <= fileheader.dataoffset && fileheader.dataoffset < fileheader.filelistoffset+fileheader.filelistsize)
+            || (fileheader.dataoffset <= fileheader.filelistoffset && fileheader.filelistoffset < fileheader.dataoffset + fileheader.datasize))))
         break;
 
       // Check the size of the file list
@@ -482,6 +485,7 @@ bool Par1Repairer::LoadRecoveryFile(string filename)
   // Remember that the file was processed
   bool success = diskfilemap.Insert(diskfile);
   assert(success);
+  _unused(success);
 
   return true;
 }
@@ -518,9 +522,9 @@ bool Par1Repairer::LoadOtherRecoveryFiles(string filename)
       // Check the the file extension is the correct form
       if ((tail[0] == 'P' || tail[0] == 'p') &&
           (
-            (tail[1] == 'A' || tail[1] == 'a') && (tail[2] == 'R' || tail[2] == 'r')
+            ((tail[1] == 'A' || tail[1] == 'a') && (tail[2] == 'R' || tail[2] == 'r'))
             ||
-            isdigit(tail[1]) && isdigit(tail[2])
+            (isdigit(tail[1]) && isdigit(tail[2]))
           ))
       {
         LoadRecoveryFile(filename);
@@ -549,9 +553,9 @@ bool Par1Repairer::LoadExtraRecoveryFiles(const list<CommandLine::ExtraFile> &ex
       // Check the the file extension is the correct form
       if ((tail[0] == 'P' || tail[0] == 'p') &&
           (
-            (tail[1] == 'A' || tail[1] == 'a') && (tail[2] == 'R' || tail[2] == 'r')
+            ((tail[1] == 'A' || tail[1] == 'a') && (tail[2] == 'R' || tail[2] == 'r'))
             ||
-            isdigit(tail[1]) && isdigit(tail[2])
+            (isdigit(tail[1]) && isdigit(tail[2]))
           ))
       {
         LoadRecoveryFile(filename);
@@ -599,6 +603,7 @@ bool Par1Repairer::VerifySourceFiles(void)
       // Remember that we have processed this file
       bool success = diskfilemap.Insert(diskfile);
       assert(success);
+      _unused(success);
 
       // Do the actual verification
       if (!VerifyDataFile(diskfile, sourcefile))
@@ -652,9 +657,9 @@ bool Par1Repairer::VerifyExtraFiles(const list<CommandLine::ExtraFile> &extrafil
       // Check the the file extension is the correct form
       if ((tail[0] == 'P' || tail[0] == 'p') &&
           (
-            (tail[1] == 'A' || tail[1] == 'a') && (tail[2] == 'R' || tail[2] == 'r')
+            ((tail[1] == 'A' || tail[1] == 'a') && (tail[2] == 'R' || tail[2] == 'r'))
             ||
-            isdigit(tail[1]) && isdigit(tail[2])
+            (isdigit(tail[1]) && isdigit(tail[2]))
           ))
       {
         skip = true;
@@ -680,6 +685,7 @@ bool Par1Repairer::VerifyExtraFiles(const list<CommandLine::ExtraFile> &extrafil
         // Remember that we have processed this file
         bool success = diskfilemap.Insert(diskfile);
         assert(success);
+        _unused(success);
 
         // Do the actual verification
         VerifyDataFile(diskfile, 0);
@@ -1023,6 +1029,7 @@ bool Par1Repairer::RenameTargetFiles(void)
         return false;
       bool success = diskfilemap.Insert(targetfile);
       assert(success);
+      _unused(success);
 
       // We no longer have a target file
       sourcefile->SetTargetExists(false);
@@ -1051,6 +1058,7 @@ bool Par1Repairer::RenameTargetFiles(void)
         return false;
       bool success = diskfilemap.Insert(targetfile);
       assert(success);
+      _unused(success);
 
       // This file is now the target file
       sourcefile->SetTargetExists(true);
@@ -1098,6 +1106,7 @@ bool Par1Repairer::CreateTargetFiles(void)
       // Remember this file
       bool success = diskfilemap.Insert(targetfile);
       assert(success);
+      _unused(success);
 
       sourcefile->SetTargetBlock(targetfile);
 
