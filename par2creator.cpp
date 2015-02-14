@@ -1414,7 +1414,7 @@ bool Par2Creator::ProcessDataForOutputIndex_(u32 outputblock, u32 outputendblock
 
     if (noiselevel > CommandLine::nlQuiet) {
       tbb::tick_count now = tbb::tick_count::now();
-      if ((now - last_cout).seconds() >= 0.1) { // only update every 0.1 seconds
+      if ((now - last_cout).seconds() >= 0.5) { // only update every 0.5 seconds
 // when building with -O3 under Darwin, using u32 instead of u64 causes incorrect values to be printed :-(
 // I believe it's a compiler codegen bug, but this work-around (using u64 instead of u32) is "good enough".
         // Update a progress indicator

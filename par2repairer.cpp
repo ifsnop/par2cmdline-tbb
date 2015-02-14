@@ -500,7 +500,7 @@ bool Par2Repairer::LoadPacketsFromFile(const string &filename)
       {
 #if WANT_CONCURRENT
         tbb::tick_count now = tbb::tick_count::now();
-        if ((now - last_cout).seconds() >= 0.1) { // only update every 0.1 seconds
+        if ((now - last_cout).seconds() >= 0.5) { // only update every 0.5 seconds
 #endif
           // Update a progress indicator
           u32 oldfraction = (u32)(1000 * progress / filesize);
@@ -2215,7 +2215,7 @@ bool Par2Repairer::ScanDataFile(DiskFile                *diskfile,    // [in]
     {
 #if WANT_CONCURRENT
       tbb::tick_count now = tbb::tick_count::now();
-      if ((now - last_cout).seconds() >= 0.1) { // only update every 0.1 seconds
+      if ((now - last_cout).seconds() >= 0.5) { // only update every 0.5 seconds
 #endif
         // Update a progress indicator
         u32 oldfraction = (u32)(1000 * progress / filesize);
@@ -3005,7 +3005,7 @@ bool Par2Repairer::ProcessDataForOutputIndex_(u32 outputindex, u32 outputendinde
 
     if (noiselevel > CommandLine::nlQuiet) {
       tbb::tick_count now = tbb::tick_count::now();
-      if ((now - last_cout).seconds() >= 0.1) { // only update every 0.1 seconds
+      if ((now - last_cout).seconds() >= 0.5) { // only update every 0.5 seconds
 // when building with -O3 under Darwin, using u32 instead of u64 causes incorrect values to be printed :-(
 // I believe it's a compiler codegen bug, but this work-around (using u64 instead of u32) is "good enough".
         // Update a progress indicator
@@ -3315,7 +3315,7 @@ bool Par2Repairer::ProcessData(u64 blockoffset, size_t blocklength)
       {
 #if WANT_CONCURRENT
         tbb::tick_count now = tbb::tick_count::now();
-        if ((now - last_cout).seconds() >= 0.1) { // only update every 0.1 seconds
+        if ((now - last_cout).seconds() >= 0.5) { // only update every 0.5 seconds
 #endif
 // when building with -O3 under Darwin, using u32 instead of u64 causes incorrect values to be printed :-(
 // I believe it's a compiler codegen bug, but this work-around (using u64 instead of u32) is "good enough".

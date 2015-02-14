@@ -273,7 +273,7 @@ bool Par2CreatorSourceFile::Open(CommandLine::NoiseLevel noiselevel,
       {
 #if WANT_CONCURRENT_PAR2_FILE_OPENING
         tbb::tick_count now = tbb::tick_count::now();
-        if ((now - last_cout).seconds() >= 0.1) { // only update every 0.1 seconds
+        if ((now - last_cout).seconds() >= 0.5) { // only update every 0.5 seconds
 #endif
           // Display progress
           u32 oldfraction = (u32)(1000 * offset / filesize);
